@@ -1,0 +1,116 @@
+<!--Denne følger mange av de samme prinsippene som Index, så jeg vil kun kommentere det som er spesielt for denne delen -->
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bærekraft</title>
+        <link rel="stylesheet" href="css/bærekraft.css">
+        <script src="javascript/index.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Hind Vadodara' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    </head>
+    <body> 
+        <div id="container_parent">
+            <div id="navbars">
+                <div id="header">
+                    <ul>
+                        <li style="float: left;"><a href="index.html"><img src="pictures/logo.png" alt="Tateggs Logo"></a></li> 
+                        <li style="float: right;"><a href="omoss.html">Om oss</a></li>
+                        <div id="middle">
+                            <li><a href="index.html">Forside</a></li>
+                            <li><a href="næringsinnhold.html">Næringsinnhold</a></li>
+                            <li class="active"><a href="bærekraft.html">Bærekraft</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div id="mobilenavbar">
+                    <div id="top_left">
+                        <p href="index.html">Bilde</p>
+                    </div>
+                    <id id="top_right">
+                        <p onclick="borgir()"><img src="pictures/menu.png" alt="Burgermenu"></p>
+                    </id>
+
+                </div>
+            </div>   
+            <div id="burgermenu">
+                <div id="under">
+                    <div class="nav">
+                        <a href="index.html">Forside</a>
+                    </div>
+                    <div class="nav">
+                        <a href="næringsinnhold.html">Næringsinnhold</a>
+                    </div>
+                    <div class="nav" style="background-color: gray;">
+                        <a href="bærekraft.html">Bærekraft</a>
+                    </div>
+                    <div class="nav">
+                        <a href="omoss.html">Om oss</a>
+                    </div>
+                </div>       
+            </div>      
+            <div id="slogan">
+                <h1>Tateggs har kun bærekraftige råvarer</h1>
+            </div>
+            <div id="main_content"> <!--Delt inn i 4 biter-->
+                <div id="hvorfor"><!--Forklarer hvorfor vi bryr oss-->
+                    <h3>Tateggs kjemper for miljøet</h3>
+                    <p>Hos oss i Tateggs er det veldig viktig å ta vare på miljøet. Derfor er vårt produkt lagd av de sunneste og mest bærekraftige råvarene vi kan få tak i. Ved å få tak i gode, lokale råvarer er vårt produkt ett godt valg for alle som bryr seg om verdens fremtid.</p>
+                </div>
+                <div id="bilde"> <!--Et bilde av den viktigste råvaren, potet-->
+                    <div id="bilde_pic">
+                        <img src="pictures/potet.png" alt="Ekte potet fra Toten, Tateggs viktigste råvare">
+                    </div>
+                    <div id="bilder_txt">
+                        <p><a href="https://upload.wikimedia.org/wikipedia/commons/6/61/Pommes_de_terre.png">"Pommes de terre"</a>, by <a href="https://commons.wikimedia.org/wiki/File:Pommes_de_terre.png">Wikimedia Commoms</a> is licenced under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></p>                        
+                    </div>
+                </div>
+                <div id="laks"><!--Har snin egen bit, grunnet at den er så stor-->
+                    <h3>Norsk oppdrettslaks</h3>
+                    <p>Laksen i Tateggs er oppdrettslaks fra ett oppdrettsanlegg i Namsos. De største utslippene kommer faktisk fra transporten, noe som er ytterst imponerende, siden laksen transporteres av lastebiler drevet av biogass.</p>
+                    <p>Grunnen til at vi bruker nettopp oppdrettsanlegget i Namsos er fordi dette anlegget har kuttet ut den største kilden for utslipp av CO2 i lakseprodukjsonen, nemlig produksjonen av soya, for fiskefor, som de heller har erstattet med norske råvarer som potet, solsikkeolje, og gryn.</p>
+                </div>  
+                <div id="tredeling"><!--De tre resterende, satt i en. Delt i to bokser-->
+                    <div class="treen"><!--Lagd på denne måten her, slik at jeg kan få et sikk-sakk design-->
+                        <div class="filler"></div><!--Filler er lagd for å fylle ut tomrom-->
+                        <div id="potet">
+                            <h3>Potet fra Norges potethovedstad</h3>
+                            <p>Våre poteter er kjøpt fra gårder i og rundt Toten, plassen kjent for sin potet-produksjon. Vi skaper muligheter for arbeidsplasser i nærområdet, og gir dere de beste potetene i Norge.</p>
+                        </div>
+                        <div class="filler"></div>
+                    </div>
+                    <div class="treen">
+                        <div id="solsikkeolje">
+                            <h3>Egenprodusert solsikkeolje</h3>
+                            <p>Solsikkeoljen våres produseres på våre egne fabrikker, med solsikker fra en gård på Tomter, Drøbak.</p>
+                        </div>
+                        <div class="filler"></div>
+                        <div id="egg">
+                            <h3>Egg på et nytt nivå</h3>
+                            <p>Eggene vi bruker er fra de samme gårdene som Prior sine egg er fra. Hønene lever gode liv, noe som gjør at eggene blir ekstra gode. Gårdene er lokale, og sett på som noen av verdens beste hønse-anlegg.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div id="foot">
+                    <div id="foot_middle">
+                        <h1>Kontakt oss</h1>
+                        <p>Matheo Kant Pangopoulos: <a href="tel: 95010620">95010620</a><br><a href="mailto: matheop@viken.no" class="right">matheop@viken.no</a></p>
+                    </div>
+                    <div id="foot_right">
+                        <a href="næringsinnhold.html#karbo">Hvor mange karbohydrater er det i produktet?</a>
+                        <a href="bærekraft.html#slogan">Hvor kommer råvarene fra?</a>
+                        <a href="omoss.html#main_content">Hvem er vi?</a>
+                    </div>
+                </div>
+                <div id="foot_down">
+                    <p>Drømtorp VGS - Dynamittveien 25B, 1400 Ski</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
