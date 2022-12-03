@@ -1,3 +1,3 @@
 # matpankan.github.io
 
-For "Supermat", gå til https://matpankan.github.io/supermat/index.html
+Prosjekt [Supermat]((https://matpankan.github.io/supermat/index.html))
