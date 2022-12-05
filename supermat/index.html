@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermat</title>
+    <link rel="stylesheet" href="css/style.css"> <!--Link til passende css-->
+    <!--De tre neste linjene er linker til fonter-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hind Vadodara' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <!---->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="javascript/index.js"></script><!--Link til javascripten-->
+</head> 
+<body> 
+     <div id="container_parent"> <!-- Dette er den alle ligger inni, starter flexbox-en -->
+        <div id="navbars"><!--Navbarene samlet på et sted-->
+            <div id="header"><!--Nav-baren for desktop og tablet-->
+                <ul>
+                    <li style="float: left;"><a href="index.html"><img src="pictures/logo.png" alt="Tateggs Logo"></a></li> 
+                    <li style="float: right;"><a href="omoss.html">Om oss</a></li>
+                    <div id="middle">
+                        <li class="active"><a href="index.html">Forside</a></li> <!--Gjør forside grået ut, noe som gjør at en kan se hvilken side en er på-->
+                        <li><a href="næringsinnhold.html">Næringsinnhold</a></li>
+                        <li><a href="bærekraft.html">Bærekraft</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div id="mobilenavbar"><!--Navbar for mobilversjonen-->
+                <div id="top_left">
+                    <p href="index.html">Bilde</p>
+                </div>
+                <id id="top_right">
+                    <p onclick="borgir()"><img src="pictures/menu.png" alt="Burgermenu"></p><!--Knappen utløser funksjonen Borgir(Burger), se index.js-->
+                </id>
+
+            </div>
+        </div>   
+        <div id="burgermenu"> <!--Burgermenyen som kommer opp når man trykker på knappen-->
+            <div id="under"> <!--Lagt til for å kunne ha position: fixed;-->
+                <div class="nav" style="background-color: gray;"> <!--Gjør forside grået ut, noe som gjør at en kan se hvilken side en er på-->
+                    <a href="index.html">Forside</a>
+                </div>
+                <div class="nav">
+                    <a href="næringsinnhold.html">Næringsinnhold</a>
+                </div>
+                <div class="nav">
+                    <a href="bærekraft.html">Bærekraft</a>
+                </div>
+                <div class="nav">
+                    <a href="omoss.html">Om oss</a>
+                </div>
+            </div>       
+        </div>     
+        <div id="slogan"> <!--Designerte området for slagord/overskrift for siden-->
+            <h1>Søndagsmiddag på bar</h1>
+        </div>
+        <div id="main_content"> <!--Hoveddelen av siden, der alt innholdet skal være-->
+            <div id="main_content_one"><!--Øverste del av hoveddelen-->
+                <div class="picbox"><!--En boks for bilder-->
+                    <div class="picbox_pic">
+                        <img src="pictures/bar.jpg" alt="Studiobilde av Tateggs">
+                    </div>
+                    <div class="picbox_txt">
+                        <p><a href="https://ccnull.de/foto/granola-bars-with-oat-flakes-dried-fruits-and-seeds-on-a-white-background/1032627">Granolabar with oatflakes</a>, by <a href="https://ccnull.de/foto/granola-bars-with-oat-flakes-dried-fruits-and-seeds-on-a-white-background/1032627">CCNULL.DE</a> is licenced by <a href="https://creativecommons.org/licenses/by/2.0/de/">CC BY 2.0 DE</a></p>
+                    </div>
+                </div>
+                <div class="textbox"><!--Samlingen av tekstbokser-->
+                    <div class="textbox_child" onclick="ben()"><!--En enkel tekstboks delt opp i;--> 
+                        <div class="overskrift"><!--En overskrift;-->
+                            <h1>Hva er Tateggs? <i>&#8595;</i></h1>
+                        </div>
+                        <div class="tekst"><!--Og en tekst-bit-->
+                            <p>Tateggs er en energi-bar, produsert for å gi akkurat deg den energien du trenger, på den beste og mest effektive måten som finnes.</p>
+                        </div>
+                        <div id="tekst1"><!--Og en tekst-bit-->
+                            <p>Tateggs er en energi-bar, produsert for å gi akkurat deg den energien du trenger, på den beste og mest effektive måten som finnes.</p>
+                        </div>
+                    </div>
+                    <div class="textbox_child"  onclick="bto()">
+                        <div class="overskrift">
+                            <h1>Kun de beste råvarene <i>&#8595;</i></h1>
+                        </div>
+                        <div class="tekst">
+                            <p>Tateggs er lagd av kun de beste råvarene man kan få tak i. De er perfekte, både for næringsinnhold, men også for miljøet. Vi har jobbet lenge, og prøvd oss frem for å finne de beste produsentene vi kunne kjøpt råvarer fra, og konkludert med at de vi har funnet er noen av verdens beste.</p>
+                        </div>
+                        <div id="tekst2">
+                            <p>Tateggs er lagd av kun de beste råvarene man kan få tak i. De er perfekte, både for næringsinnhold, men også for miljøet. Vi har jobbet lenge, og prøvd oss frem for å finne de beste produsentene vi kunne kjøpt råvarer fra, og konkludert med at de vi har funnet er noen av verdens beste.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main_content_two"><!--Nederste del av hoveddelen-->
+                <div class="textbox">
+                    <div class="textbox_child" onclick="btre()">
+                        <div class="overskrift">
+                            <h1>Perfekt hvis du er litt sulten <i>&#8595;</i></h1>
+                        </div>
+                        <div class="tekst">
+                            <p>Tateggs er perfekt hvis man bare er litt sulten, eller bare generelt trenger litt energi. Den er produsert for å ha perfekte nivåer med næringsstoffer, så ved  ta en bar får du den sunneste energien man kan få tak i.</p>
+                        </div>
+                        <div id="tekst3">
+                            <p>Tateggs er perfekt hvis man bare er litt sulten, eller bare generelt trenger litt energi. Den er produsert for å ha perfekte nivåer med næringsstoffer, så ved  ta en bar får du den sunneste energien man kan få tak i.</p>
+                        </div>
+                    </div>
+                    <div class="textbox_child" onclick="bfire()">
+                        <div class="overskrift">
+                            <h1>Hva gjør oss spesielle? <i>&#8595;</i></h1>
+                        </div>
+                        <div class="tekst">
+                            <p>Det som skiller oss fra konkurrentene våre er vårt engasjement for bærekraft og miljø. Mange andre produsenter bruker syntetiske varer, eller oljer og lignende kjøpt inn fra utlandet. Dette fører til mye utslipp. Våre produkter er alle lagd av norskproduserte råvarer, som er kortreiste og sunne.</p>
+                        </div>
+                        <div id="tekst4">
+                            <p>Det som skiller oss fra konkurrentene våre er vårt engasjement for bærekraft og miljø. Mange andre produsenter bruker syntetiske varer, eller oljer og lignende kjøpt inn fra utlandet. Dette fører til mye utslipp. Våre produkter er alle lagd av norskproduserte råvarer, som er kortreiste og sunne.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="picbox">
+                    <div class="pixbox_txt">
+                        <p><a href="https://vegan.rocks/nb/blog/what-to-eat-before-morning-workout/">Man eating energybar</a>, by <a href="https://vegan.rocks/nb/blog/what-to-eat-before-morning-workout/">Vegan.Rocks</a> is licenced by <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. The picture has been photoshopped; The energybar is changed from chocolate to granola.</p>
+                    </div>
+                    <div class="picbox_pic">
+                        <img src="pictures/maneat.png" alt="Mann som spiser Tateggs">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"><!--Footeren, delt opp i to biter;-->
+            <div id="foot"><!--En bit for kontaktinfo+-->
+                <div id="foot_middle">
+                    <h1>Kontakt oss</h1>
+                    <p>Matheo Kant Pangopoulos: <a href="tel: 95010620">95010620</a><br><a href="mailto: matheop@viken.no" class="right">matheop@viken.no</a></p>
+                </div>
+                <div id="foot_right">
+                    <a href="næringsinnhold.html#karbo">Hvor mange karbohydrater er det i produktet?</a>
+                    <a href="bærekraft.html#slogan">Hvor kommer råvarene fra?</a>
+                    <a href="omoss.html#main_content">Hvem er vi?</a>
+                </div>
+            </div>
+            <div id="foot_down"><!--En bit for "hvor vi er"-->
+                <p>Drømtorp VGS - Dynamittveien 25B, 1400 Ski</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
