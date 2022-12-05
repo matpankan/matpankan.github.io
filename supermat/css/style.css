@@ -1,0 +1,506 @@
+/*Store deler av koden er flexboxer, og ting for å tilpasse de. Dermed ønsker jeg å forklare en flexbox, istedenfor absolutt alle sammen*/
+*, html, body {
+  margin: 0;
+}
+
+#container_parent { /*Dette er koden for container_parent, hele siden*/
+    display: flex; /*Displayet er flex, noe som gjør det til en flexbox. Dette gjør at andre flexboxer kan legges inni denne*/
+    flex-direction: column;/*Dette er hvilken retning den legger boksene som er inni seg. Kolonner, eller rader*/
+    height: 1500px;/*Jeg valgte å gjøre siden 1500px høy, istedenfor 100vh(som er en side), ettersom jeg ville ha en side som var lengre enn bred, og som man kunne bla igennom*/
+    justify-content: center;/*Objektene inni blir sentrert på y-aksen*/
+    align-items: center;/*Objektene inni blir sentrert på x-aksen*/
+    background-color: #E4E700;/*Hvilken bakgrunn selve siden skal ha*/
+}
+
+#navbars {/*Her igjen er en flexbox, med mange av de samme delene*/
+  display: flex; 
+  flex-direction: column;
+  height: 3%;/*Den skal være 3% av hele boksen*/
+  width: 100%;/*Og 100% av bredden*/
+  justify-content: center;
+  align-items: center;
+  font-size: large;/*teksten inni skal være stor*/
+  font-family: 'Montserrat';/*Hvilken font jeg ønsker*/
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+#header ul {
+  list-style-type: none;/*Det visees ingen prikker eller tall, bare objektene i lista*/
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B50072;
+  width: 100%;
+  position: fixed;
+  justify-content: center;
+}
+
+#middle{
+  display: flex;
+  justify-content: center;
+}
+
+#header li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#header li a:hover {
+  background-color: #111;
+}
+
+#header img{
+  height: 1em;
+}
+
+.active{
+  background-color: rgb(66, 66, 66);
+}
+
+#mobilenavbar {
+  display: none/*Den vises ikke før skjermen er mindre*/;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  position: fixed;
+}
+
+#top_right {
+  display: flex;
+  flex-direction: row;
+  height: 7.5%;
+  width: 15%;
+  background-color: #B50072;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+#top_right img{
+  width: 100%;
+}
+
+#top_left {
+  display: flex;
+  flex-direction: row;
+  height: 7.5%;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color: white;
+  background-color: #B50072;
+  text-align: center;
+}
+
+#burgermenu{
+  display: none;
+  flex-direction: column;
+  height: 15%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #B50072;
+}
+
+#under{
+  display: flex;
+  flex-direction: column;
+  height: 34%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  background-color: #B50072;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.nav a{
+  color: white;
+  text-decoration: none;
+}
+
+#burgermenu li a:hover {
+  background-color: #111;
+}
+
+#slogan {
+  display: flex;
+  flex-direction: column;
+  height: 15%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 300%;
+  text-align: center;
+  font-family: 'Open Sans';
+}
+
+#main_content {
+  display: flex;
+  flex-direction: column;
+  height: 62%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Hind Vadodara';
+}
+
+#main_content_one {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#main_content_two {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#mobilenavbar{
+  display: none;
+}
+
+.textbox{ /*Jeg bruker class istednfor ID ettersom jeg skal bruke denne koden flere ganger enn 1*/
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.textbox_child{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  justify-content: center;
+  align-items: center;
+}
+
+.overskrift{
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.tekst{
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#tekst1{
+  display: none;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#tekst2{
+  display: none;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#tekst3{
+  display: none;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#tekst4{
+  display: none;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.picbox{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.picbox_pic{
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.picbox_txt{
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.picbox_pic img{
+  height: auto;
+  width: 90%;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #33079F;
+  color: white;
+  font-family: 'Montserrat';
+}
+#foot {
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#foot_middle{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#foot_right{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+#foot_down{
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#footer a{
+  color: white;
+}
+
+.right{
+  float: right;
+}
+
+@media screen and (min-width: 1200px){
+  .picbox_pic img{
+    width: auto;
+    height: 90%;
+  }    
+  .textbox{
+    font-size: 110%;
+  }
+}
+@media screen and (min-width: 1900px){
+  .textbox{
+    font-size: 150%;
+  }
+}
+@media screen and (max-width:1100px){ /*Når skjermen er mindre enn 1100px*/
+  .picbox_pic img{
+    height: auto;
+    width: 100%;    
+  }
+} 
+@media screen and (max-width:980px){/*Når skjermen er mindre enn 980px*/
+  #under{
+    display: none;
+  }
+  #burgermeny{
+    display: none;
+  }
+
+  #slogan{
+    font-size: 200%;
+    display: flex;
+  }
+
+  #main_content_one {
+    flex-direction: column-reverse;
+  }
+  
+  #main_content_two {
+    flex-direction: column;
+  }
+
+  .textbox{
+    width: 100%;
+    height: 50%;
+  }
+
+  .textbox_child{
+    width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  }
+
+  .tekst{
+    font-size: 0.8em;
+  }
+
+  .picbox{
+    width: 100%;
+    height: 50%;
+  }
+
+  .picbox_pic img{
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width:550px){
+  #tekst1{
+    visibility: hidden;
+  }
+  #tekst2{
+    visibility: hidden;
+  }
+  #tekst3{
+    visibility: hidden;
+  }
+  #tekst4{
+    visibility: hidden;
+  }
+  
+}
+
+
+@media screen and (max-width:550px){ /*Når skjermen er mindre enn 550px*/
+  #tekst1{
+    visibility: visible;
+  }
+  #tekst2{
+    visibility: visible;
+  }
+  #tekst3{
+    visibility: visible;
+  }
+  #tekst4{
+    visibility: visible;
+  }
+  #under{
+    display: flex;
+  }
+  #main_content{
+    font-size: 70%;
+  }
+  #slogan{
+    font-size: 100%;
+  }
+  .tekst{
+    display: none;
+  }
+  #foot_middle p{
+    font-size: 70%;
+  }
+  #foot_middle h1{
+    font-size: 200%;
+  }
+  #foot_right{
+    display: none;
+  }
+  #header{
+    display: none;
+  }
+  #mobilenavbar{
+    display: flex;
+  }
+}
+
+@media screen and (max-width:350px){/*Når skjermen er mindre enn 350px*/
+  #foot_middle p{
+    font-size: 60%;
+  }
+  #foot_middle h1{
+    font-size: 180%;
+  }
+  .picbox_pic img{
+    width: 100%;
+    height: auto;
+  }
+}

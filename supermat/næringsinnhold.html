@@ -1,0 +1,118 @@
+<!--Denne følger mange av de samme prinsippene som Index, så jeg vil kun kommentere det som er spesielt for denne delen -->
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Næringsinnhold</title>
+    <link rel="stylesheet" href="css/næringsinnhold.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hind Vadodara' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <script src="javascript/index.js"></script>
+</head>
+<body> 
+     <div id="container_parent"> 
+        <div id="navbars"> 
+            <div id="header">
+                <ul>
+                    <li style="float: left;"><a href="index.html"><img src="pictures/logo.png" alt="Tateggs Logo"></a></li> 
+                    <li style="float: right;"><a href="omoss.html">Om oss</a></li>
+                    <div id="middle">
+                        <li><a href="index.html">Forside</a></li>
+                        <li class="active"><a href="næringsinnhold.html">Næringsinnhold</a></li>
+                        <li><a href="bærekraft.html">Bærekraft</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div id="mobilenavbar">
+                <div id="top_left">
+                    <p href="index.html">Bilde</p>
+                </div>
+                <id id="top_right">
+                    <p onclick="borgir()"><img src="pictures/menu.png" alt="Burgermenu"></p>
+                </id>
+
+            </div>
+        </div>   
+        <div id="burgermenu">
+            <div id="under">
+                <div class="nav">
+                    <a href="index.html">Forside</a>
+                </div>
+                <div class="nav" style="background-color: gray;">
+                    <a href="næringsinnhold.html">Næringsinnhold</a>
+                </div>
+                <div class="nav">
+                    <a href="bærekraft.html">Bærekraft</a>
+                </div>
+                <div class="nav">
+                    <a href="omoss.html">Om oss</a>
+                </div>
+            </div>       
+        </div>    
+        <div id="slogan">
+            <h1>Den beste maten markedet har å tilby</h1>
+        </div> 
+        <div id="main_content"> <!--Delt inn i;-->
+            <div id="oversk"><!--En del for overskriften-->
+                <h2>Tateggs er det man kan kalle "supermat". Det er mat som er lagd av kun de beste råvarene, for å få et nærmest perfekt næringsinnhold.</h3>
+            </div>
+             
+            <div id="stoffer"><!--En del for de tre forskjellige næringsstoffene-->
+                <div id="karbo">
+                    <h3>Karbohydrater</h3>
+                    <p>Vårt produkt inneholder riktige og gode mengder med karbohydrater.</p>
+                    <p>Hovedkilden til karbohydrater er potet, noe som gjør at man får mye fiber, og karbohydrater som gir deg energi over tid.</p>
+                    <p>Det er ca 47% karbohydrater, dette tilsvarer 47 g per 100g, eller 11.8 gram per bar.</p>
+                </div>
+                <div id="prot">
+                    <h3>Proteiner</h3>
+                    <p>Protein får man både fra egg og laks. Her igjen er det den sunneste mengden med protein man finner.</p> 
+                    <p>Det er ca 16% proteiner, dette tilsvarer 16 g per 100g, eller 4 gram per bar.</p>
+                </div>
+                <div id="fett">
+                    <h3>Fett</h3>
+                    <p>Fettet kommer fra egg, laks, og solsikkeolje. Dermed har baren hovedsakelig umettet fett, "sunt fett", og inneholder i tillegg Omega 3.</p>
+                    <p>Det er ca 35% fett, dette tilsvarer 35 g per 100g, eller 8.7 gram per bar.</p>
+                </div>
+            </div>
+            <div id="down_content"><!--En del for ingrediensene og en tabell med innhold-->
+                <div id="ingred">
+                    <h3>Tateggs består av:</h3>
+                    <h4>Potet</h4>
+                    <p>53%</p>
+                    <h4>Egg</h4>
+                    <p>16% g</p>
+                    <h4>Solsikkeolje</h4>
+                    <p>26% g</p>
+                    <h4>Laks</h4>
+                    <p>5%</p>
+                </div>
+                <div id="tabell">
+                    <h3>Tabell med næringsinnhold</h3>
+                    <img src="pictures/tabell.png" alt="Tabell over Tateggs næringsinnhold">
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="foot">
+                <div id="foot_middle">
+                    <h1>Kontakt oss</h1>
+                    <p>Matheo Kant Pangopoulos:</p>
+                    <a href="tel: 95010620">95010620</a><br><a href="mailto: matheop@viken.no" class="right">matheop@viken.no</a>
+                </div>
+                <div id="foot_right">
+                    <a href="næringsinnhold.html#karbo">Hvor mange karbohydrater er det i produktet?</a>
+                    <a href="bærekraft.html#slogan">Hvor kommer råvarene fra?</a>
+                    <a href="omoss.html#main_content">Hvem er vi?</a>
+                </div>
+            </div>
+            <div id="foot_down">
+                <p>Drømtorp VGS - Dynamittveien 25B, 1400 Ski</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
