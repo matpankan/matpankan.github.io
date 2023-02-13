@@ -8,4 +8,4 @@ Prosjekt [Etterlign Dropbox](https://matpankan.github.io/dropbox/index.html)
 
 Prosjekt [ForLoops](https://matpankan.github.io/forloop/index.html)
 
-Prosjekt [YRapi/UU](https://matpankan.github.io/https://matpankan.github.io/vermeldingAPI/index.html)
+Prosjekt [YR api/UU](https://matpankan.github.io/vermeldingAPI/index.html)
