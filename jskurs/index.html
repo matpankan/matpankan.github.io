@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS kurs</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="container_parent">
+        <div id="space"></div>
+        <div id="container_child">
+            <div id="questions">
+                <div id="q_one">
+                    <br>
+                    <h1>Introduksjon til JavaScript</h1>
+                    <p>Velkommen til vårt kurs i enkel JavaScript</p>
+                    <p>I dette kurset vil du lære om simple ting, som feks variabler, for-løkker, kondisjonale-løkker, og mer</p>
+                    <p>Da ønsker vi deg lykke til, så er det bare å hoppe inn i oppgavene</p>
+                    <h3>console.log er måten man printer ut informasjon i JS</h3>
+                    <p>Måten man skriver det på avgjører alt. JS har null tilgivelse for skrivefeil, så det må skrives helt rett</p>
+                    <p>console.log kan deles inn i flere deler. console viser at hva enn som skal skje videre skjer i konsollen. log viser da at det som kommer etterpå skal logges, altså skrives, i konsollen</p>
+                    <p>Etter console.log skrives så hva som skal printes ut</p>
+                    <p>Måten man skriver det på er slik: console.log('Det du vil printe')</p>
+                    <p>Det er veldig viktig å huske parantesene (), mens '' varierer mer fra gang til gang. '' brukes for å vise at det som skal printes ut er en "string", eller tekst (noe vi kommer tilbake til senere), mens hvis man dropper de vil det leses som en kommando/variabel</p>
+                    <h2>Skriv navnet ditt i tekst-plasseringen, og trykk Run for å kjøre programmet</h2>
+                </div>
+                <div id="q_two">
+                    <h1>Du har nå printet ut din første string i JS, gratulerer</h1>
+                    <p>Nå skal vi se hva du husker av koden fra forrige oppgave</p>
+                    <p>Når det gjelder "quotation-marks" er det to varianter man kan bruke. " og '. Begge to funker, men den som starter en string og den som avslutter må være den samme, ellers vil det ikke funke</p>
+                    <h2>Hva mangler for at koden skal funke?</h2>
+                </div>
+                <div id="q_three">
+                    <br>
+                    <h1>Variabler og datatyper</h1>
+                    <p>I JS har vi tre måter å skrive variabler på: var, let, og const</p>
+                    <p>var og let følger samme prinsipp, der let bare er en mer oppdatert av var, mens const skiller seg ut</p>
+                    <p>Selv om let og var defineres, kan de forandres på senere punkter i koden</p>
+                    <p>Måten man forandrer den på er ved å skrive "variabel = verdi". Ikke let foran, ikke var foran, ingenting foran</p>
+                    <p>Dette kan man ikke gjøre med const. En const er konstant, altså kan ikke forandres i løpet av koden. Hvis man prøver det vil man få en feilmelding, og koden vil ikke funke</p>
+                    <p>Noe vi skal komme tilbake til senere er regning i JS. Det du kommer til å trenge for denne oppgaver er dette: Hvis du vil plusse til noe til en variabel kan du istedenfor å skrive x=x+1, kun skrive x += 1</p>
+                    <h3>Prøv å lage en variabel med let, hvor du definerer alderen din</h3>
+                    <h3>Prøv å lage en variabel med const, hvor du (igjen) definerer navnet ditt</h3>
+                    <h3>Prøv å ta alderen din, og plusse til noen år på den</h3>
+                    <h3>Prøv å lage en variabel som heter "mix" med let, som er variablene plusset sammen</h3>
+                </div>
+                <div id="q_four">
+                    <br>
+                    <h1>Variabler og datatyper</h1>
+                    <p>I simpel JS er det flere ulike datatyper, men nå skal vi lære om de fire følgende:</p>
+                    <p>String: String er datatypen for tekst. String defineres ved å innlemme teksten i " eller '. Dette er da hvorfor man måtte gjøre dette i console.log-oppgaven, for ellers ville det ikke vært tekst. Hvis man plusser sammen stringer vil de bli satt sammen</p>
+                    <p>Number: Number er tall. Man bruker number for regning, og for tall generelt. Disse inlemmes ikke inn i noe, og man kan bruke komma for å gjøre det til desimaltall. Grunnen til at stringen (navnet) og numberet (alderen) ble satt sammen når dere plusset det var ettersom number fungerer som en string når en samarbeider med en</p>
+                    <p>Boolean: Boolean er true eller false. I kun små bokstaver skriver man ordet, uten quotation-marks. Disse brukes for å få forskjellige ting til å skje hvis andre ting er true, eller false</p>
+                    <p>Undefined: Dette er som du kunne gjettet, når du ikke har definert noe. Hvis man prøver å printe ut en variabel man aldri definerte vil outputen være: undefined</p>
+                    <p>I JS kan man regne på mange forskjellige måter, men her er et lite tips for deg. Bruk +=, -=, /=, *=, istedenfor å gjenta navnet på variabelen, som vist i forrige oppgave. Det betyr at "x" + hva enn du skriver bak = noe</p>
+                    <h3>Nå kommer litt oppgaver rundt string og number, før vi går videre til den siste relevante datatypen</h3>
+                    <h3>Lek litt rundt med de forskjellige verdiene. Se hva som skjer når man plusser sammen forskjellige datatyper. ta number og pluss de sammen med andre number, eller stringer, osv</h3>
+                    <h3>Hold deg til string og number</h3>
+                    <h3>Se hva outputen er</h3>
+                </div>
+                <div id="q_five">
+                    <br>
+                    <h1>Lister/arrays</h1>
+                    <p>Lister, eller som man kaller det i JS, arrays, er variabler som kan lagre flere verdier samtidig</p>
+                    <p>De samme reglene gjelder for arrays som variabler:</p>
+                    <h4>String="Tekst"</h4>
+                    <h4>Tall=5</h4>
+                    <h4>Variabler = Variabel-navn</h4>
+                    <p>Måten en definerer en array er ved å skrive feks; let list = []</p>
+                    <p>Eksempelet lager en array som heter list, som er tom</p>
+                    <p>Hvis jeg skulle ønsket å skrive navnet ditt, alderen din, og en variabel som heter "uker", ville jeg skrevet det sånn her:</p>
+                    <h4 id="name_age_week">let list = ["Knut", 12, uker]</h4>
+                </div>
+            </div>
+            <div id="workspace">
+                <div id="upperWork"> 
+                    <div id="start">
+                        <button onclick="en()">1</button>
+                        <button onclick="to()">2</button>
+                        <button onclick="tre()">3</button>
+                        <button onclick="fire()">4</button>
+                        <button onclick="fem()">5</button>
+                    </div>  
+                    <div id="work_one">
+                        <form name="one" class="first" action="javascript:intno()"> 
+                            <h3>
+                                <label for="w_one"><b>console.log('Velkommen til kurset,</b></label>
+                                <input type="text" name="w_one" size="10">')
+                            </h3>
+                        </form>
+                    </div>  
+                    <div id="work_two">
+                        <form name="two" class="first" action="javascript:intno()"> 
+                            <h3 style="float: left;">
+                                <label for="w_one"><b>console.log(</b></label>
+                                <input type="text" name="w_one" size="3">
+                                <label for="w_two"><b id="wtc"></b></label>
+                                <input type="text" name="w_two" size="3">)
+                            </h3>
+                        </form>
+                    </div>   
+                    <div id="work_three">
+                        <form name="three" class="first" action="javascript:intno()"> 
+                            <h3 style="float: left;">
+                                <input type="text" name="w_one" size="80%">
+                                console.log(age)
+                                <input type="text" name="w_two" size="80%">
+                                console.log(name)
+                                <input type="text" name="w_three" size="80%">
+                                console.log(age)
+                                <input type="text" name="w_four" size="80%">
+                                console.log(mix)
+                            </h3>
+                        </form>
+                    </div>  
+                    <div id="work_four">
+                        <form name="four" class="first" action="javascript:intno()"> 
+                            <h3 style="float: left;">
+                                <input type="text" name="w_one" size="80%" value="let a =">
+                                <input type="text" name="w_two" size="80%" value="let b =">
+                                let ab = a+b
+                                <br>
+                                console.log(ab)
+                            </h3>
+                        </form>
+                    </div>     
+                    <div id="work_five">
+                        <form name="five" class="first" action="javascript:intno()"> 
+                            <h3 style="float: left;">
+                                <input type="text" name="w_one" size="80%" value="let a =">
+                            </h3>
+                        </form>
+                    </div>    
+                </div>
+                <div id="latterWork">
+                    <button id="nextButton" onclick="nextLvl()">Next</button>
+                    <button id="runButton" onclick="runScript()">Run</button>
+                </div>
+            </div>
+            <div id="console">
+                <h1>Console</h1>
+                <p id="printConsole"></p>
+                <p id="printConsoleTwo"></p>
+                <p id="printConsoleThree"></p>
+                <p id="printConsoleFour"></p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
