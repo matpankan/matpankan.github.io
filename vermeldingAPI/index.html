@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>li</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="container_parent">
+        <div id="header">
+            <div id="h_left">
+                <p id="city">Ski</p>
+            </div>
+            <div id="veret_now">
+                <p id="temp_now"></p>
+                <p id="wind_now"></p>
+                <p id="rain_now"></p>
+            </div>
+            <div id="h_right">
+                <form name="byer" action="javascript:by()">
+                    <select name="byer" id="byer">
+                        <option value="oslo">Oslo</option>
+                        <option value="ski">Ski</option>
+                        <option value="bergen">Bergen</option>
+                        <option value="bodø">Bodø</option>
+                        <option value="trondheim">Trondheim</option>
+                        <option value="tokyo">Tokyo</option>
+                        <option value="berlin">Berlin</option>
+                        <option value="newyork">New York</option>
+                    </select>
+                    <input type="submit">
+                </form>
+                
+            </div>
+        </div>
+        <div id="content_parent">
+            <button id="today" onclick="dagMelding()"></button>
+            <div id="dag_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_one">DATO</h1>
+                    <table>
+                        <tr id="labels">
+                        <th>Tid</th>
+                        <th>Vær</th>
+                        <th>Temp.</th>
+                        <th>Nedbør mm</th>
+                        <th>Vind</th>
+                        </tr>
+                        <tr id="one_row_0">
+                        <td id="one_time_00"></td>
+                        <td id="one_sum_00"></td>
+                        <td id="one_temp_00"></td>
+                        <td id="one_rain_00"></td>
+                        <td id="one_wind_00"></td>
+                        </tr>
+                        <tr id="one_row_1">
+                            <td id="one_time_01"></td>
+                            <td id="one_sum_01"></td>
+                            <td id="one_temp_01"></td>
+                            <td id="one_rain_01"></td>
+                            <td id="one_wind_01"></td>
+                        </tr>
+                        <tr id="one_row_2">
+                            <td id="one_time_02"></td>
+                            <td id="one_sum_02"></td>
+                            <td id="one_temp_02"></td>
+                            <td id="one_rain_02"></td>
+                            <td id="one_wind_02"></td>
+                        </tr>
+                        <tr id="one_row_3">
+                            <td id="one_time_03"></td>
+                            <td id="one_sum_03"></td>
+                            <td id="one_temp_03"></td>
+                            <td id="one_rain_03"></td>
+                            <td id="one_wind_03"></td>
+                        </tr>
+                        <tr id="one_row_4">
+                            <td id="one_time_04"></td>
+                            <td id="one_sum_04"></td>
+                            <td id="one_temp_04"></td>
+                            <td id="one_rain_04"></td>
+                            <td id="one_wind_04"></td>
+                        </tr>
+                        <tr id="one_row_5">
+                            <td id="one_time_05"></td>
+                            <td id="one_sum_05"></td>
+                            <td id="one_temp_05"></td>
+                            <td id="one_rain_05"></td>
+                            <td id="one_wind_05"></td>
+                        </tr>
+                        <tr id="one_row_6">
+                            <td id="one_time_06"></td>
+                            <td id="one_sum_06"></td>
+                            <td id="one_temp_06"></td>
+                            <td id="one_rain_06"></td>
+                            <td id="one_wind_06"></td>
+                        </tr>
+                        <tr id="one_row_7">
+                            <td id="one_time_07"></td>
+                            <td id="one_sum_07"></td>
+                            <td id="one_temp_07"></td>
+                            <td id="one_rain_07"></td>
+                            <td id="one_wind_07"></td>
+                        </tr>
+                        <tr id="one_row_8">
+                            <td id="one_time_08"></td>
+                            <td id="one_sum_08"></td>
+                            <td id="one_temp_08"></td>
+                            <td id="one_rain_08"></td>
+                            <td id="one_wind_08"></td>
+                        </tr>
+                        <tr id="one_row_9">
+                            <td id="one_time_09"></td>
+                            <td id="one_sum_09"></td>
+                            <td id="one_temp_09"></td>
+                            <td id="one_rain_09"></td>
+                            <td id="one_wind_09"></td>
+                        </tr>
+                        <tr id="one_row_10">
+                            <td id="one_time_10"></td>
+                            <td id="one_sum_10"></td>
+                            <td id="one_temp_10"></td>
+                            <td id="one_rain_10"></td>
+                            <td id="one_wind_10"></td>
+                        </tr>
+                        <tr id="one_row_11">
+                            <td id="one_time_11"></td>
+                            <td id="one_sum_11"></td>
+                            <td id="one_temp_11"></td>
+                            <td id="one_rain_11"></td>
+                            <td id="one_wind_11"></td>
+                        </tr>
+                        <tr id="one_row_12">
+                            <td id="one_time_12"></td>
+                            <td id="one_sum_12"></td>
+                            <td id="one_temp_12"></td>
+                            <td id="one_rain_12"></td>
+                            <td id="one_wind_12"></td>
+                        </tr>
+                        <tr id="one_row_13">
+                            <td id="one_time_13"></td>
+                            <td id="one_sum_13"></td>
+                            <td id="one_temp_13"></td>
+                            <td id="one_rain_13"></td>
+                            <td id="one_wind_13"></td>
+                        </tr>
+                        <tr id="one_row_14">
+                            <td id="one_time_14"></td>
+                            <td id="one_sum_14"></td>
+                            <td id="one_temp_14"></td>
+                            <td id="one_rain_14"></td>
+                            <td id="one_wind_14"></td>
+                        </tr>
+                        <tr id="one_row_15">
+                            <td id="one_time_15"></td>
+                            <td id="one_sum_15"></td>
+                            <td id="one_temp_15"></td>
+                            <td id="one_rain_15"></td>
+                            <td id="one_wind_15"></td>
+                        </tr>
+                        <tr id="one_row_16">
+                            <td id="one_time_16"></td>
+                            <td id="one_sum_16"></td>
+                            <td id="one_temp_16"></td>
+                            <td id="one_rain_16"></td>
+                            <td id="one_wind_16"></td>
+                        </tr>
+                        <tr id="one_row_17">
+                            <td id="one_time_17"></td>
+                            <td id="one_sum_17"></td>
+                            <td id="one_temp_17"></td>
+                            <td id="one_rain_17"></td>
+                            <td id="one_wind_17"></td>
+                        </tr>
+                        <tr id="one_row_18">
+                            <td id="one_time_18"></td>
+                            <td id="one_sum_18"></td>
+                            <td id="one_temp_18"></td>
+                            <td id="one_rain_18"></td>
+                            <td id="one_wind_18"></td>
+                        </tr>
+                        <tr id="one_row_19">
+                            <td id="one_time_19"></td>
+                            <td id="one_sum_19"></td>
+                            <td id="one_temp_19"></td>
+                            <td id="one_rain_19"></td>
+                            <td id="one_wind_19"></td>
+                        </tr>
+                        <tr id="one_row_20">
+                            <td id="one_time_20"></td>
+                            <td id="one_sum_20"></td>
+                            <td id="one_temp_20"></td>
+                            <td id="one_rain_20"></td>
+                            <td id="one_wind_20"></td>
+                        </tr>
+                        <tr id="one_row_21">
+                            <td id="one_time_21"></td>
+                            <td id="one_sum_21"></td>
+                            <td id="one_temp_21"></td>
+                            <td id="one_rain_21"></td>
+                            <td id="one_wind_21"></td>
+                        </tr>
+                        <tr id="one_row_22">
+                            <td id="one_time_22"></td>
+                            <td id="one_sum_22"></td>
+                            <td id="one_temp_22"></td>
+                            <td id="one_rain_22"></td>
+                            <td id="one_wind_22"></td>
+                        </tr>
+                        <tr id="one_row_23">
+                            <td id="one_time_23"></td>
+                            <td id="one_sum_23"></td>
+                            <td id="one_temp_23"></td>
+                            <td id="one_rain_23"></td>
+                            <td id="one_wind_23"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button id="today_two" onclick="dagTwoMelding()"></button>
+            <div id="dag_to_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_two">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="two_time_00"></td>
+                      <td id="two_sum_00"></td>
+                      <td id="two_temp_00"></td>
+                      <td id="two_rain_00"></td>
+                      <td id="two_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_01"></td>
+                        <td id="two_sum_01"></td>
+                        <td id="two_temp_01"></td>
+                        <td id="two_rain_01"></td>
+                        <td id="two_wind_01"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_02"></td>
+                        <td id="two_sum_02"></td>
+                        <td id="two_temp_02"></td>
+                        <td id="two_rain_02"></td>
+                        <td id="two_wind_02"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_03"></td>
+                        <td id="two_sum_03"></td>
+                        <td id="two_temp_03"></td>
+                        <td id="two_rain_03"></td>
+                        <td id="two_wind_03"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_04"></td>
+                        <td id="two_sum_04"></td>
+                        <td id="two_temp_04"></td>
+                        <td id="two_rain_04"></td>
+                        <td id="two_wind_04"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_05"></td>
+                        <td id="two_sum_05"></td>
+                        <td id="two_temp_05"></td>
+                        <td id="two_rain_05"></td>
+                        <td id="two_wind_05"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_06"></td>
+                        <td id="two_sum_06"></td>
+                        <td id="two_temp_06"></td>
+                        <td id="two_rain_06"></td>
+                        <td id="two_wind_06"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_07"></td>
+                        <td id="two_sum_07"></td>
+                        <td id="two_temp_07"></td>
+                        <td id="two_rain_07"></td>
+                        <td id="two_wind_07"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_08"></td>
+                        <td id="two_sum_08"></td>
+                        <td id="two_temp_08"></td>
+                        <td id="two_rain_08"></td>
+                        <td id="two_wind_08"></td>
+                    </tr>
+                    <tr>
+                        <td id="two_time_09"></td>
+                        <td id="two_sum_09"></td>
+                        <td id="two_temp_09"></td>
+                        <td id="two_rain_09"></td>
+                        <td id="two_wind_09"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_10"></td>
+                          <td id="two_sum_10"></td>
+                          <td id="two_temp_10"></td>
+                          <td id="two_rain_10"></td>
+                          <td id="two_wind_10"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_11"></td>
+                          <td id="two_sum_11"></td>
+                          <td id="two_temp_11"></td>
+                          <td id="two_rain_11"></td>
+                          <td id="two_wind_11"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_12"></td>
+                          <td id="two_sum_12"></td>
+                          <td id="two_temp_12"></td>
+                          <td id="two_rain_12"></td>
+                          <td id="two_wind_12"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_13"></td>
+                          <td id="two_sum_13"></td>
+                          <td id="two_temp_13"></td>
+                          <td id="two_rain_13"></td>
+                          <td id="two_wind_13"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_14"></td>
+                          <td id="two_sum_14"></td>
+                          <td id="two_temp_14"></td>
+                          <td id="two_rain_14"></td>
+                          <td id="two_wind_14"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_15"></td>
+                          <td id="two_sum_15"></td>
+                          <td id="two_temp_15"></td>
+                          <td id="two_rain_15"></td>
+                          <td id="two_wind_15"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_16"></td>
+                          <td id="two_sum_16"></td>
+                          <td id="two_temp_16"></td>
+                          <td id="two_rain_16"></td>
+                          <td id="two_wind_16"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_17"></td>
+                          <td id="two_sum_17"></td>
+                          <td id="two_temp_17"></td>
+                          <td id="two_rain_17"></td>
+                          <td id="two_wind_17"></td>
+                      </tr>
+                      <tr>
+                        <td id="two_time_18"></td>
+                        <td id="two_sum_18"></td>
+                        <td id="two_temp_18"></td>
+                        <td id="two_rain_18"></td>
+                        <td id="two_wind_18"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_19"></td>
+                          <td id="two_sum_19"></td>
+                          <td id="two_temp_19"></td>
+                          <td id="two_rain_19"></td>
+                          <td id="two_wind_19"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_20"></td>
+                          <td id="two_sum_20"></td>
+                          <td id="two_temp_20"></td>
+                          <td id="two_rain_20"></td>
+                          <td id="two_wind_20"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_21"></td>
+                          <td id="two_sum_21"></td>
+                          <td id="two_temp_21"></td>
+                          <td id="two_rain_21"></td>
+                          <td id="two_wind_21"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_22"></td>
+                          <td id="two_sum_22"></td>
+                          <td id="two_temp_22"></td>
+                          <td id="two_rain_22"></td>
+                          <td id="two_wind_22"></td>
+                      </tr>
+                      <tr>
+                          <td id="two_time_23"></td>
+                          <td id="two_sum_23"></td>
+                          <td id="two_temp_23"></td>
+                          <td id="two_rain_23"></td>
+                          <td id="two_wind_23"></td>
+                      </tr>
+                  </table>
+                </div>
+            </div>
+            <button id="today_three" onclick="dagThreeMelding()"></button>
+            <div id="dag_tre_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_three">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="three_time_00"></td>
+                      <td id="three_sum_00"></td>
+                      <td id="three_temp_00"></td>
+                      <td id="three_rain_00"></td>
+                      <td id="three_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_01"></td>
+                        <td id="three_sum_01"></td>
+                        <td id="three_temp_01"></td>
+                        <td id="three_rain_01"></td>
+                        <td id="three_wind_01"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_02"></td>
+                        <td id="three_sum_02"></td>
+                        <td id="three_temp_02"></td>
+                        <td id="three_rain_02"></td>
+                        <td id="three_wind_02"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_03"></td>
+                        <td id="three_sum_03"></td>
+                        <td id="three_temp_03"></td>
+                        <td id="three_rain_03"></td>
+                        <td id="three_wind_03"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_04"></td>
+                        <td id="three_sum_04"></td>
+                        <td id="three_temp_04"></td>
+                        <td id="three_rain_04"></td>
+                        <td id="three_wind_04"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_05"></td>
+                        <td id="three_sum_05"></td>
+                        <td id="three_temp_05"></td>
+                        <td id="three_rain_05"></td>
+                        <td id="three_wind_05"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_06"></td>
+                        <td id="three_sum_06"></td>
+                        <td id="three_temp_06"></td>
+                        <td id="three_rain_06"></td>
+                        <td id="three_wind_06"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_07"></td>
+                        <td id="three_sum_07"></td>
+                        <td id="three_temp_07"></td>
+                        <td id="three_rain_07"></td>
+                        <td id="three_wind_07"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_08"></td>
+                        <td id="three_sum_08"></td>
+                        <td id="three_temp_08"></td>
+                        <td id="three_rain_08"></td>
+                        <td id="three_wind_08"></td>
+                    </tr>
+                    <tr>
+                        <td id="three_time_09"></td>
+                        <td id="three_sum_09"></td>
+                        <td id="three_temp_09"></td>
+                        <td id="three_rain_09"></td>
+                        <td id="three_wind_09"></td>
+                      </tr>
+                      <tr>
+                          <td id="three_time_10"></td>
+                          <td id="three_sum_10"></td>
+                          <td id="three_temp_10"></td>
+                          <td id="three_rain_10"></td>
+                          <td id="three_wind_10"></td>
+                      </tr>
+                      <tr>
+                          <td id="three_time_11"></td>
+                          <td id="three_sum_11"></td>
+                          <td id="three_temp_11"></td>
+                          <td id="three_rain_11"></td>
+                          <td id="three_wind_11"></td>
+                      </tr>
+                      <tr>
+                          <td id="three_time_12"></td>
+                          <td id="three_sum_12"></td>
+                          <td id="three_temp_12"></td>
+                          <td id="three_rain_12"></td>
+                          <td id="three_wind_12"></td>
+                      </tr>
+                      <tr>
+                          <td id="three_time_13"></td>
+                          <td id="three_sum_13"></td>
+                          <td id="three_temp_13"></td>
+                          <td id="three_rain_13"></td>
+                          <td id="three_wind_13"></td>
+                      </tr>
+                  </table>
+                </div>
+                
+            </div>
+            <button id="today_four" onclick="dagFourMelding()"></button>
+            <div id="dag_fire_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_four">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="four_time_00"></td>
+                      <td id="four_sum_00"></td>
+                      <td id="four_temp_00"></td>
+                      <td id="four_rain_00"></td>
+                      <td id="four_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="four_time_01"></td>
+                        <td id="four_sum_01"></td>
+                        <td id="four_temp_01"></td>
+                        <td id="four_rain_01"></td>
+                        <td id="four_wind_01"></td>
+                    </tr>
+                    <tr>
+                        <td id="four_time_02"></td>
+                        <td id="four_sum_02"></td>
+                        <td id="four_temp_02"></td>
+                        <td id="four_rain_02"></td>
+                        <td id="four_wind_02"></td>
+                    </tr>
+                    <tr>
+                        <td id="four_time_03"></td>
+                        <td id="four_sum_03"></td>
+                        <td id="four_temp_03"></td>
+                        <td id="four_rain_03"></td>
+                        <td id="four_wind_03"></td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+            <button id="today_five" onclick="dagFiveMelding()"></button>
+            <div id="dag_fem_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_five">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="five_time_00"></td>
+                      <td id="five_sum_00"></td>
+                      <td id="five_temp_00"></td>
+                      <td id="five_rain_00"></td>
+                      <td id="five_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="five_time_01"></td>
+                        <td id="five_sum_01"></td>
+                        <td id="five_temp_01"></td>
+                        <td id="five_rain_01"></td>
+                        <td id="five_wind_01"></td>
+                    </tr>
+                    <tr>
+                        <td id="five_time_02"></td>
+                        <td id="five_sum_02"></td>
+                        <td id="five_temp_02"></td>
+                        <td id="five_rain_02"></td>
+                        <td id="five_wind_02"></td>
+                    </tr>
+                    <tr>
+                        <td id="five_time_03"></td>
+                        <td id="five_sum_03"></td>
+                        <td id="five_temp_03"></td>
+                        <td id="five_rain_03"></td>
+                        <td id="five_wind_03"></td>
+                    </tr>
+                  </table>
+                </div>
+            </div><button id="today_six" onclick="dagSixMelding()"></button>
+            <div id="dag_seks_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_six">DATO</h1>
+                    <table>
+                        <tr>
+                          <th>Tid</th>
+                          <th>Vær</th>
+                          <th>Temp.</th>
+                          <th>Nedbør mm</th>
+                          <th>Vind</th>
+                        </tr>
+                        <tr>
+                          <td id="six_time_00"></td>
+                          <td id="six_sum_00"></td>
+                          <td id="six_temp_00"></td>
+                          <td id="six_rain_00"></td>
+                          <td id="six_wind_00"></td>
+                        </tr>
+                        <tr>
+                            <td id="six_time_01"></td>
+                            <td id="six_sum_01"></td>
+                            <td id="six_temp_01"></td>
+                            <td id="six_rain_01"></td>
+                            <td id="six_wind_01"></td>
+                        </tr>
+                        <tr>
+                            <td id="six_time_02"></td>
+                            <td id="six_sum_02"></td>
+                            <td id="six_temp_02"></td>
+                            <td id="six_rain_02"></td>
+                            <td id="six_wind_02"></td>
+                        </tr>
+                        <tr>
+                            <td id="six_time_03"></td>
+                            <td id="six_sum_03"></td>
+                            <td id="six_temp_03"></td>
+                            <td id="six_rain_03"></td>
+                            <td id="six_wind_03"></td>
+                        </tr>
+                      </table>
+                </div>
+            </div><button id="today_seven" onclick="dagSevenMelding()"></button>
+            <div id="dag_sju_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_seven">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="seven_time_00"></td>
+                      <td id="seven_sum_00"></td>
+                      <td id="seven_temp_00"></td>
+                      <td id="seven_rain_00"></td>
+                      <td id="seven_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="seven_time_01"></td>
+                        <td id="seven_sum_01"></td>
+                        <td id="seven_temp_01"></td>
+                        <td id="seven_rain_01"></td>
+                        <td id="seven_wind_01"></td>
+                    </tr>
+                    <tr>
+                        <td id="seven_time_02"></td>
+                        <td id="seven_sum_02"></td>
+                        <td id="seven_temp_02"></td>
+                        <td id="seven_rain_02"></td>
+                        <td id="seven_wind_02"></td>
+                    </tr>
+                    <tr>
+                        <td id="seven_time_03"></td>
+                        <td id="seven_sum_03"></td>
+                        <td id="seven_temp_03"></td>
+                        <td id="seven_rain_03"></td>
+                        <td id="seven_wind_03"></td>
+                    </tr>
+                  </table>
+                </div>
+            </div><button id="today_eight" onclick="dagEightMelding()"></button>
+            <div id="dag_atte_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_eight">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="eight_time_00"></td>
+                      <td id="eight_sum_00"></td>
+                      <td id="eight_temp_00"></td>
+                      <td id="eight_rain_00"></td>
+                      <td id="eight_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="eight_time_01"></td>
+                        <td id="eight_sum_01"></td>
+                        <td id="eight_temp_01"></td>
+                        <td id="eight_rain_01"></td>
+                        <td id="eight_wind_01"></td>
+                    </tr>
+                    <tr>
+                        <td id="eight_time_02"></td>
+                        <td id="eight_sum_02"></td>
+                        <td id="eight_temp_02"></td>
+                        <td id="eight_rain_02"></td>
+                        <td id="eight_wind_02"></td>
+                    </tr>
+                    <tr>
+                        <td id="eight_time_03"></td>
+                        <td id="eight_sum_03"></td>
+                        <td id="eight_temp_03"></td>
+                        <td id="eight_rain_03"></td>
+                        <td id="eight_wind_03"></td>
+                    </tr>
+                  </table>
+                </div>
+            </div><button id="today_nine" onclick="dagNineMelding()"></button>
+            <div id="dag_ni_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_nine">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="nine_time_00"></td>
+                      <td id="nine_sum_00"></td>
+                      <td id="nine_temp_00"></td>
+                      <td id="nine_rain_00"></td>
+                      <td id="nine_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="nine_time_01"></td>
+                        <td id="nine_sum_01"></td>
+                        <td id="nine_temp_01"></td>
+                        <td id="nine_rain_01"></td>
+                        <td id="nine_wind_01"></td>
+                    </tr>
+                    <tr>
+                        <td id="nine_time_02"></td>
+                        <td id="nine_sum_02"></td>
+                        <td id="nine_temp_02"></td>
+                        <td id="nine_rain_02"></td>
+                        <td id="nine_wind_02"></td>
+                    </tr>
+                    <tr>
+                        <td id="nine_time_03"></td>
+                        <td id="nine_sum_03"></td>
+                        <td id="nine_temp_03"></td>
+                        <td id="nine_rain_03"></td>
+                        <td id="nine_wind_03"></td>
+                    </tr>
+                  </table>
+                </div>
+            </div><button id="today_ten" onclick="dagTenMelding()"></button>
+            <div id="dag_ti_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_ten">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="ten_time_00"></td>
+                      <td id="ten_sum_00"></td>
+                      <td id="ten_temp_00"></td>
+                      <td id="ten_rain_00"></td>
+                      <td id="ten_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="ten_time_01"></td>
+                        <td id="ten_sum_01"></td>
+                        <td id="ten_temp_01"></td>
+                        <td id="ten_rain_01"></td>
+                        <td id="ten_wind_01"></td>
+                    </tr>
+                    <tr>
+                        <td id="ten_time_02"></td>
+                        <td id="ten_sum_02"></td>
+                        <td id="ten_temp_02"></td>
+                        <td id="ten_rain_02"></td>
+                        <td id="ten_wind_02"></td>
+                    </tr>
+                    <tr>
+                        <td id="ten_time_03"></td>
+                        <td id="ten_sum_03"></td>
+                        <td id="ten_temp_03"></td>
+                        <td id="ten_rain_03"></td>
+                        <td id="ten_wind_03"></td>
+                    </tr>
+                  </table>
+                </div>
+            </div><button id="today_eleven" onclick="dagElevenMelding()"></button>
+            <div id="dag_elleve_melding">
+                <div class="knapp_del">
+                    <button onclick="knapp()">x</button>
+                </div>
+                <div class="tabell_del">
+                    <h1 id="date_eleven">DATO</h1>
+                <table>
+                    <tr>
+                      <th>Tid</th>
+                      <th>Vær</th>
+                      <th>Temp.</th>
+                      <th>Nedbør mm</th>
+                      <th>Vind</th>
+                    </tr>
+                    <tr>
+                      <td id="eleven_time_00"></td>
+                      <td id="eleven_sum_00"></td>
+                      <td id="eleven_temp_00"></td>
+                      <td id="eleven_rain_00"></td>
+                      <td id="eleven_wind_00"></td>
+                    </tr>
+                    <tr>
+                        <td id="eleven_time_01"></td>
+                        <td id="eleven_sum_01"></td>
+                        <td id="eleven_temp_01"></td>
+                        <td id="eleven_rain_01"></td>
+                        <td id="eleven_wind_01"></td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
