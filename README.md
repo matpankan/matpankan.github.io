@@ -12,4 +12,4 @@ Prosjekt [YR api/UU](https://matpankan.github.io/vermeldingAPI/index.html)
 
 Prosjekt [nettbutikkPrototype](https://matpankan.github.io/nettbutikkPrototype/index.html)
 
-Prosjekt [Twine Prosjektet](https://matpankan.github.io/twineproject/Jarlove Simulator.html)
+Prosjekt [Twine Prosjektet](https://matpankan.github.io/twineproject/jarlovesimulator.html)
